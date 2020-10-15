@@ -6,7 +6,7 @@ if [ $TRAVIS_BRANCH == 'main' ] ; then
   ssh-add
   npm run build
   rsync -rq --delete --rsync-path="mkdir -p react-app && rsync" \
-  $TRAVIS_BUILD_DIR/public travis@142.93.36.116:/home/callum/react-app
+  $TRAVIS_BUILD_DIR/public travis@142.93.36.116:/home/callum/public/react-app
 else
   echo "Not deploying, since this branch isn't main."
 fi
